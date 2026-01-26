@@ -127,8 +127,8 @@ export function ProjectsSection() {
                 {/* Metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {project.metrics.map(metric => (
-                    <div key={metric.label} className="backdrop-blur-md bg-gray-900/5 dark:bg-white/5 p-4 rounded-2xl text-center border border-gray-900/10 dark:border-white/10 transition-colors duration-300">
-                      <p className="text-2xl font-bold text-teal-600 dark:text-teal-400 transition-colors duration-300">{metric.value}</p>
+                    <div key={metric.label} className="backdrop-blur-md bg-gray-900/5 dark:bg-white/5 p-3 md:p-4 rounded-2xl text-center border border-gray-900/10 dark:border-white/10 transition-colors duration-300">
+                      <p className="text-lg md:text-2xl font-bold text-teal-600 dark:text-teal-400 transition-colors duration-300">{metric.value}</p>
                       <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 transition-colors duration-300">{metric.label}</p>
                     </div>
                   ))}
