@@ -1,0 +1,67 @@
+FIX ONLY THE PROFILE PICTURE - Keep Everything Else the Same
+
+ISSUE: Profile picture is B&W and has weird hover effect
+GOAL: Make profile picture always colored and well-positioned
+
+═══════════════════════════════════════════════════════════
+UPDATE src/components/About.tsx
+═══════════════════════════════════════════════════════════
+
+KEEP the current layout exactly as it is:
+- Left side: Text content (01, subtitle, paragraphs, capability cards)
+- Right side: Profile picture
+
+ONLY FIX THE PROFILE PICTURE:
+
+REMOVE:
+❌ Black & white filter
+❌ Hover effect that changes B&W to color
+❌ Any grayscale/filter effects
+
+NEW PROFILE PICTURE STYLING:
+```tsx
+<div className="relative">
+  {/* Decorative background circle */}
+  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full blur-3xl" />
+  
+  {/* Profile image */}
+  <img
+    src="/path-to-your-image.jpg"
+    alt="Rahul Bandikolla"
+    className="relative w-80 h-80 rounded-full object-cover
+               border-2 border-teal-500/30
+               shadow-2xl shadow-teal-500/20
+               transition-transform duration-300
+               hover:scale-105"
+  />
+</div>
+```
+
+KEY CHANGES:
+1. ✓ Remove filter-grayscale and hover:filter-none
+2. ✓ Image is always in FULL COLOR
+3. ✓ Add subtle teal border (border-2 border-teal-500/30)
+4. ✓ Add soft shadow with teal tint
+5. ✓ Keep subtle hover scale effect (hover:scale-105)
+6. ✓ Add decorative glow background (optional but nice)
+
+STYLING DETAILS:
+- Image size: w-80 h-80 (320x320px)
+- Border radius: rounded-full (perfect circle)
+- Border: 2px teal border with 30% opacity
+- Shadow: Large shadow with teal tint for depth
+- Hover: Slight scale up (1.05x) - subtle and professional
+- Position: relative positioning for layering
+
+DO NOT CHANGE:
+- ✓ Section layout
+- ✓ Text content
+- ✓ Capability cards
+- ✓ Section structure
+- ✓ "01 About Me" heading
+- ✓ Subtitle positioning
+- ✓ Two-column layout
+
+PROVIDE:
+Only the updated About.tsx file with the profile picture fix.
+Keep all other content exactly as it currently is.

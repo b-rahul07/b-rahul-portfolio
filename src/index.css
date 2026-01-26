@@ -1,0 +1,109 @@
+/* 
+  Font Import Strategy:
+  Since the specific font files for Satoshi, Technor, Array, and Zodiak 
+  are not provided as webfonts, we will use high-quality system-font 
+  fallbacks that match the visual style shown in the screenshots, 
+  combined with specific weights and tracking to replicate the 
+  "Indian Type Foundry" aesthetic.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=JetBrains+Mono:wght@100..800&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Instrument+Serif:ital@0;1&family=Silkscreen&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-hero: linear-gradient(to bottom, #ffffff 0%, #f0fdfa 50%, #ffffff 100%);
+    --grid-color: rgba(20, 184, 166, 0.1);
+  }
+
+  .dark {
+    --bg-hero: linear-gradient(to bottom, #0a0a0a 0%, #0f1f1f 50%, #0a0a0a 100%);
+    --grid-color: rgba(20, 184, 166, 0.03);
+  }
+
+  body {
+    @apply transition-colors duration-300 font-sans;
+  }
+}
+
+/* Smooth theme transition */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Improved Section Title Visibility */
+  .section-title-bg {
+    @apply transition-colors duration-300;
+    color: theme('colors.gray.900' / 0.1);
+  }
+
+  .dark .section-title-bg {
+    color: theme('colors.white' / 0.1);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes remove-border {
+  to { border-right-color: transparent; }
+}
+
+.typing-animation {
+  display: inline-block;
+  width: 0;
+  animation: 
+    typing 3s steps(40) 1s forwards,
+    blink 0.75s step-end infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .typing-animation {
+    animation: 
+      typing 3s steps(40) 1s forwards,
+      blink 0.75s step-end infinite,
+      remove-border 0.01s 4s forwards;
+  }
+}
+
+html { 
+  scroll-behavior: smooth; 
+}

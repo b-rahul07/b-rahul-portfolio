@@ -1,0 +1,242 @@
+ULTRA-PRIORITY TRANSFORMATION - COMPLETE EVERYTHING IN THIS RESPONSE
+
+I need a complete visual overhaul of my AI/ML portfolio. Current: minimal/basic. Target: jaw-dropping, recruiter-stopping showcase.
+
+CONTEXT:
+- Stack: React + TypeScript + Vite + Tailwind + Framer Motion
+- Current site: https://b-rahul-portfolio.vercel.app
+- Must maintain all existing data from src/data/*.ts files
+- Focus: Maximum visual impact with minimal iterations
+
+═══════════════════════════════════════════════════════════
+PRIORITY 1: HERO SECTION (src/components/Hero.tsx)
+═══════════════════════════════════════════════════════════
+
+Transform to full-viewport masterpiece:
+
+FEATURES:
+✓ Animated CSS gradient background (teal/cyan/purple, 15s loop)
+✓ Large typography: "RAHUL BANDIKOLLA" (text-7xl, bold, white)
+✓ Subtitle: "AI/ML Engineering Student | Applied Machine Learning & Data Science" (text-2xl, teal-400)
+✓ Tagline: "Building deployable ML systems with emphasis on data curation, model performance, and real-world constraints—from preprocessing to inference API deployment."
+✓ 3 glassmorphic stat cards: "9.21 CGPA", "Applied ML & Data", "2027 Graduating"
+✓ Profile image: circular, floating animation, gradient border (if image exists)
+✓ 2 buttons: "View Projects" (teal, scrolls to projects), "Get in Touch" (outline)
+✓ Social icons row: GitHub, LinkedIn, Email (with hover glow effect)
+✓ Animated scroll indicator (bounce animation)
+✓ Framer Motion: stagger animations for all elements
+
+STYLING:
+- Background: animated gradient, dark base (#0a0a0a)
+- Cards: backdrop-blur-md, bg-white/5, border-teal-500/20, rounded-2xl
+- Buttons: rounded-full, px-8 py-3
+- All animations: smooth, 60fps, ease-out
+
+CODE: Provide COMPLETE Hero.tsx file with all TypeScript types.
+
+═══════════════════════════════════════════════════════════
+PRIORITY 2: PROJECTS SECTION (src/components/Projects.tsx)
+═══════════════════════════════════════════════════════════
+
+Transform to visual showcase with alternating layout:
+
+FEATURES:
+✓ "03 Projects" heading (text-6xl, bold, numbered)
+✓ Subtitle: "Projects that showcase my ability to take ML from concept to production—with measurable impact and real deployment experience."
+✓ 3 projects (Kala, A.C.E., JalVeda) from src/data/projects.ts
+✓ Alternating left-right layout (project 1 left, project 2 right, project 3 left)
+✓ Each project card:
+  - Large project preview image (hover: zoom effect)
+  - Category badge (e.g., "END-TO-END ML SYSTEM")
+  - Project title (text-4xl)
+  - Description (2-3 lines)
+  - Tech stack pills (glassmorphic badges)
+  - Metric cards for Kala: "71% TOP-1", "94% TOP-5", "113ms LATENCY"
+  - Buttons: "Code" (github link), "View Project" (live demo, teal)
+✓ Scroll reveal: fade + slide animation for each project (stagger 0.3s)
+✓ Glassmorphic cards throughout
+
+STYLING:
+- Project card: p-8, rounded-3xl, glassmorphic
+- Image: rounded-2xl, overflow-hidden, hover:scale-105 transition
+- Tech pills: px-3 py-1, rounded-full, bg-teal-500/10, text-sm
+- Metrics: grid of small cards, text-center, count-up animation on scroll
+
+CODE: Provide COMPLETE Projects.tsx with metric animations.
+
+═══════════════════════════════════════════════════════════
+PRIORITY 3: SKILLS SECTION (src/components/Skills.tsx)
+═══════════════════════════════════════════════════════════
+
+Transform to capability-focused grid:
+
+FEATURES:
+✓ "02 Skills" heading
+✓ Subtitle: "I focus on building practical ML systems. Here's what I bring to the table, organized by capability rather than just tools."
+✓ 2x2 grid layout (responsive: 1 col on mobile)
+✓ 4 skill categories:
+  1. ML Foundations: Supervised Learning, Feature Engineering, Model Evaluation, Error Analysis, Training Optimization, Performance Metrics
+  2. Deep Learning: Neural Networks, Transfer Learning, Model Architecture, Overfitting Prevention
+  3. Data & Systems: Python, Data Preprocessing, Pandas/NumPy, SQL, API-based Inference, Git
+  4. Deployment: Flask, REST APIs, Latency Optimization, Model Serving
+✓ Each card: glassmorphic, category number (01-04), list of skills with custom checkmarks
+✓ Hover: card brightens, border glow increases
+✓ Scroll animation: cards fade + scale in (stagger 0.15s)
+
+STYLING:
+- Grid: grid-cols-1 md:grid-cols-2, gap-6
+- Card: p-6, backdrop-blur-md, border-teal-500/20
+- Category number: text-5xl, teal-500/20, font-bold
+- Skills: list with teal checkmark icons (lucide-react Check)
+
+CODE: Provide COMPLETE Skills.tsx using src/data/skills.ts if exists, or hardcode data.
+
+═══════════════════════════════════════════════════════════
+PRIORITY 4: NAVBAR ENHANCEMENT (src/components/Navbar.tsx)
+═══════════════════════════════════════════════════════════
+
+Transform to glassmorphic fixed navbar:
+
+FEATURES:
+✓ Fixed position (top-0, z-50)
+✓ Glassmorphic: backdrop-blur-lg, bg-black/50, border-b border-white/10
+✓ Logo: "B RAHUL." (left)
+✓ Nav links: About, Skills, Projects, Experience, Education, Certifications, Contact
+✓ Active section indicator (underline in teal)
+✓ Theme toggle (sun/moon icon)
+✓ Resume download button (right, teal, rounded-full)
+✓ Smooth scroll to sections on click
+✓ Hide on scroll down, show on scroll up (optional if time allows)
+
+STYLING:
+- Height: h-16
+- Container: max-w-7xl mx-auto, flex justify-between items-center
+- Links: text-sm, hover:text-teal-400 transition
+- Active link: text-teal-400, border-b-2 border-teal-400
+
+CODE: Provide COMPLETE Navbar.tsx with smooth scroll functionality.
+
+═══════════════════════════════════════════════════════════
+PRIORITY 5: REMAINING SECTIONS (Batch Update)
+═══════════════════════════════════════════════════════════
+
+Quick updates for these sections (use existing components, enhance styling):
+
+ABOUT (src/components/About.tsx):
+✓ "01 About Me" heading
+✓ Two paragraphs about approach (from resume summary)
+✓ 3 capability cards: "Deep Learning", "ML Deployment", "Model Evaluation & Optimization"
+✓ Profile image (right side, if not in hero)
+
+EXPERIENCE (src/components/Experience.tsx):
+✓ "04 Experience" heading
+✓ Timeline style with connecting line
+✓ VaultofCodes internship card (Jul-Aug 2025)
+✓ 3 bullet points with arrow icons
+
+EDUCATION (src/components/Education.tsx):
+✓ "05 Education" heading
+✓ Single card: B.Tech, Vardhaman College
+✓ CGPA: 9.21/10.0 (prominent)
+✓ Relevant coursework badges
+
+CERTIFICATIONS (src/components/Certifications.tsx):
+✓ "06 Certifications" heading
+✓ 3-column grid (responsive: 1 col mobile)
+✓ 3 cert cards: Salesforce, NIELIT, NPTEL
+✓ Badge icon, title, issuer, date, ID, "Verify Credential" link
+
+CONTACT (src/components/Contact.tsx):
+✓ "Get In Touch" large heading
+✓ Subtitle: "Open to internship opportunities in AI, Machine Learning, and Data Science..."
+✓ Location: "Hyderabad, India"
+✓ 2x2 grid of contact cards:
+  - Email Me (with icon)
+  - Call Me (with icon)
+  - LinkedIn (logo)
+  - GitHub (logo)
+✓ Each card: glassmorphic, hover: lift effect
+
+STYLING: All sections use same glassmorphic card style, teal accents, scroll animations.
+
+CODE: Provide updates for ALL 5 components above. Can be concise but complete.
+
+═══════════════════════════════════════════════════════════
+PRIORITY 6: GLOBAL STYLES & ANIMATIONS
+═══════════════════════════════════════════════════════════
+
+Update these files:
+
+1. src/index.css - Add:
+```css@keyframes gradient {
+0%, 100% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+}@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}@keyframes bounce-slow {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}html { scroll-behavior: smooth; }
+
+2. src/App.tsx - Ensure all sections render in order:
+```tsx<Navbar />
+<Hero />
+<About />
+<Skills />
+<Projects />
+<Experience />
+<Education />
+<Certifications />
+<Contact />
+<Footer />
+````
+
+Create src/utils/animations.ts for reusable Framer Motion variants:
+
+export const fadeInUp = {
+hidden: { opacity: 0, y: 20 },
+visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};export const staggerContainer = {
+hidden: { opacity: 0 },
+visible: {
+opacity: 1,
+transition: { staggerChildren: 0.1 }
+}
+};// Add more variants...
+
+═══════════════════════════════════════════════════════════
+CRITICAL IMPLEMENTATION NOTES:
+═══════════════════════════════════════════════════════════
+
+1. ✓ Provide COMPLETE file contents (no "// rest of code..." placeholders)
+2. ✓ Use existing data from src/data/*.ts files where they exist
+3. ✓ All TypeScript types properly defined
+4. ✓ Responsive: mobile-first (sm:, md:, lg: breakpoints)
+5. ✓ Performance: use transform/opacity for animations (GPU accelerated)
+6. ✓ Accessibility: proper ARIA labels, semantic HTML
+7. ✓ Dark mode: all colors must work on dark background
+8. ✓ Framer Motion: use motion.div, motion.section for animations
+9. ✓ Icons: use lucide-react (already installed)
+10. ✓ Don't add new dependencies
+
+═══════════════════════════════════════════════════════════
+DELIVERABLES - DO ALL OF THESE NOW:
+═══════════════════════════════════════════════════════════
+
+Provide complete code for:
+1. ✓ src/components/Hero.tsx (full rewrite)
+2. ✓ src/components/Projects.tsx (full rewrite)
+3. ✓ src/components/Skills.tsx (full rewrite)
+4. ✓ src/components/Navbar.tsx (enhanced)
+5. ✓ src/components/About.tsx (enhanced)
+6. ✓ src/components/Experience.tsx (enhanced)
+7. ✓ src/components/Education.tsx (enhanced)
+8. ✓ src/components/Certifications.tsx (enhanced)
+9. ✓ src/components/Contact.tsx (enhanced)
+10. ✓ src/index.css (add animations)
+11. ✓ src/utils/animations.ts (new file)
+12. ✓ src/App.tsx (if updates needed)
+
+START NOW. Deliver everything in this single response.
+This is my only chance - make it count! 🚀
