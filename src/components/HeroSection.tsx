@@ -48,7 +48,7 @@ export function HeroSection() {
           {/* Status Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/30 dark:border-teal-500/20 text-teal-600 dark:text-teal-400 text-sm mb-8 transition-colors duration-300"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/30 dark:border-teal-500/20 text-teal-600 dark:text-teal-400 text-sm mb-8 mt-24 md:mt-0 transition-colors duration-300"
           >
             <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
             Open to Opportunities
@@ -65,7 +65,7 @@ export function HeroSection() {
           {/* Subtitle */}
           <motion.div variants={itemVariants} className="mb-4">
             <h2 className="text-xl md:text-2xl text-teal-600 dark:text-teal-400 mb-4 font-mono font-medium tracking-tight 
-                           typing-animation overflow-hidden whitespace-nowrap border-r-2 border-current">
+                           typing-animation overflow-hidden whitespace-normal md:whitespace-nowrap border-r-2 border-current">
               Machine Learning Engineer · Applied Data Science
             </h2>
           </motion.div>

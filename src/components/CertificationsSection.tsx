@@ -73,7 +73,8 @@ export function CertificationsSection() {
                   {cert.title}
                 </h3>
                 <p className="text-teal-600 dark:text-teal-400 font-semibold mb-2 transition-colors duration-300">{cert.issuer}</p>
-                <p className="text-gray-500 dark:text-gray-500 text-xs font-mono tracking-tight mb-4 transition-colors duration-300">{cert.date} | ID: {cert.credentialId}</p>
+                <p className="text-gray-500 dark:text-gray-500 text-xs font-mono tracking-tight mb-1 transition-colors duration-300">{cert.date}</p>
+                <p className="text-teal-600 dark:text-teal-400 text-sm font-mono font-bold tracking-tight mb-4 transition-colors duration-300">ID: {cert.credentialId}</p>
                 {cert.details && (
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 italic transition-colors duration-300">{cert.details}</p>
                 )}
