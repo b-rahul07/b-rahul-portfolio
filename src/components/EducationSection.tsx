@@ -8,7 +8,7 @@ export function EducationSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const courses = [
-    "Machine Learning", "Deep Learning", "Data Structures", 
+    "Machine Learning", "Deep Learning", "Data Structures",
     "Algorithms", "Database Management", "Computer Networks"
   ];
 
@@ -56,7 +56,7 @@ export function EducationSection() {
                   <Award className="w-7 h-7 text-teal-600 dark:text-teal-400" />
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">9.21<span className="text-teal-500/50 text-xl">/10.0</span></p>
+                  <p className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">9.14<span className="text-teal-500/50 text-xl">/10.0</span></p>
                   <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-widest mt-1 transition-colors duration-300">Current CGPA</p>
                 </div>
               </div>

@@ -4,7 +4,7 @@ export default function StatsBar() {
   const stats = [
     { label: 'Projects', value: '3+' },
     { label: 'Skills', value: '15+' },
-    { label: 'CGPA', value: '9.21' },
+    { label: 'CGPA', value: '9.14' },
     { label: 'Hours Trained', value: '540+' }
   ];
 

@@ -84,7 +84,7 @@ export function HeroSection() {
             className="grid grid-cols-1 md:grid-cols-3 gap-golden-md mb-golden-lg w-full max-w-2xl"
           >
             {[
-              { label: "CGPA", value: "9.21" },
+              { label: "CGPA", value: "9.14" },
               { label: "ML Focus", value: "Applied" },
               { label: "Grad", value: "2027" }
             ].map((stat, i) => (
