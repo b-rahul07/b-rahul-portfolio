@@ -20,6 +20,20 @@ const projects = [
     image: "/kala-img.png",
   },
   {
+    title: "MediBridge Connect",
+    subtitle: "REAL-TIME MEDICAL TRANSLATION",
+    description: "Full-stack telemedicine platform with instant two-way AI translation (GPT-4o) and voice transcription (Whisper) bridging language barriers. Engineered latency-sensitive chat using Socket.IO with optimistic UI and cursor-based pagination for 10,000+ message histories. Deployed with hybrid httpOnly cookie + Bearer token authentication across distributed cloud environments (Vercel & Render).",
+    metrics: [
+      { label: "DELIVERY", value: "50-200ms" },
+      { label: "PAGINATION", value: "Cursor-based" },
+      { label: "AUTH", value: "Hybrid JWT" }
+    ],
+    tags: ["FastAPI", "PostgreSQL", "React", "TypeScript", "Socket.IO", "GPT-4o", "Whisper"],
+    githubUrl: "https://github.com/b-rahul07/medibridge-connect",
+    liveUrl: "https://medibridge-connect.vercel.app",
+    image: "/medibrige.png",
+  },
+  {
     title: "A.C.E.",
     subtitle: "SYSTEM DESIGN & ALGORITHMS",
     description: "Academic management system featuring a custom greedy seating allocation algorithm and automated PDF-to-mind-map generation.",
@@ -32,20 +46,6 @@ const projects = [
     githubUrl: null,
     liveUrl: null,
     image: "/ace-image.png",
-  },
-  {
-    title: "JalVeda",
-    subtitle: "DATA ACQUISITION & SIGNAL PROCESSING",
-    description: "IoT system for real-time water quality analysis. Implemented reference-based calibration and multi-sample averaging to reduce sensor noise.",
-    metrics: [
-      { label: "SENSORS", value: "2" },
-      { label: "CALIBRATION", value: "±5%" },
-      { label: "NOISE RED.", value: "40%" }
-    ],
-    tags: ["Arduino", "Python", "IoT", "Embedded Systems", "Data Processing"],
-    githubUrl: null,
-    liveUrl: null,
-    image: "/jalveda-img.png",
   }
 ];
 
