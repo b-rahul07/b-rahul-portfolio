@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Kala",
     subtitle: "END-TO-END ML SYSTEM",
-    description: "Deep learning artist classification system trained on 8,774 images. Achieved 71% Top-1 / 94% Top-5 accuracy using transfer learning with EfficientNetV2-S. CPU-based inference for real-time usability with 113ms latency. Performance reflects a trade-off between class imbalance and real-world generalization; evaluation prioritizes Top-5 accuracy for user-facing reliability.",
+    description: "An AI-powered digital museum that identifies the stylistic DNA of 50 legendary artists. Built with a custom deep learning model trained on nearly 9,000 paintings, Kala brings complex machine learning directly to the user. I prioritized real-world usability over raw compute—optimizing for CPU-based inference to deliver lightning-fast (113ms) predictions and 94% Top-5 accuracy without relying on a heavy backend.",
     metrics: [
       { label: "TOP-1", value: "71%" },
       { label: "TOP-5", value: "94%" },
@@ -22,11 +22,11 @@ const projects = [
   {
     title: "MediBridge Connect",
     subtitle: "REAL-TIME MEDICAL TRANSLATION",
-    description: "Full-stack telemedicine platform with instant two-way AI translation (GPT-4o) and voice transcription (Whisper) bridging language barriers. Engineered latency-sensitive chat using Socket.IO with optimistic UI and cursor-based pagination for 10,000+ message histories. Deployed with hybrid httpOnly cookie + Bearer token authentication across distributed cloud environments (Vercel & Render).",
+    description: "A real-time telemedicine platform designed to break down language barriers in healthcare. MediBridge provides instant, two-way voice and text translation between doctors and patients using GPT-4o and Whisper AI. Behind the clean UI is a highly optimized, latency-sensitive chat engine powered by Socket.IO, featuring optimistic updates, infinite scroll for massive message histories, and secure hybrid authentication.",
     metrics: [
-      { label: "DELIVERY", value: "50-200ms" },
-      { label: "PAGINATION", value: "Cursor-based" },
-      { label: "AUTH", value: "Hybrid JWT" }
+      { label: "LATENCY", value: "<200ms" },
+      { label: "MSG HISTORY", value: "10k+" },
+      { label: "SECURE AUTH", value: "Hybrid" }
     ],
     tags: ["FastAPI", "PostgreSQL", "React", "TypeScript", "Socket.IO", "GPT-4o", "Whisper"],
     githubUrl: "https://github.com/b-rahul07/medibridge-connect",
@@ -111,7 +111,7 @@ export function ProjectsSection() {
                   {project.subtitle}
                 </Badge>
                 <h3 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white transition-colors duration-300 uppercase tracking-tighter font-display">{project.title}</h3>
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">
+                <p className="text-lg text-gray-600 dark:text-slate-400 leading-relaxed text-pretty max-w-[65ch] transition-colors duration-300">
                   {project.description}
                 </p>
 
@@ -125,11 +125,11 @@ export function ProjectsSection() {
                 </div>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                   {project.metrics.map(metric => (
-                    <div key={metric.label} className="backdrop-blur-md bg-gray-900/5 dark:bg-white/5 p-3 md:p-4 rounded-2xl text-center border border-gray-900/10 dark:border-white/10 transition-colors duration-300">
-                      <p className="text-lg md:text-2xl font-bold text-teal-600 dark:text-teal-400 transition-colors duration-300">{metric.value}</p>
-                      <p className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 transition-colors duration-300">{metric.label}</p>
+                    <div key={metric.label} className="flex flex-col items-center justify-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                      <p className="text-2xl md:text-3xl font-bold tracking-tight text-teal-400 whitespace-nowrap">{metric.value}</p>
+                      <p className="text-xs font-semibold tracking-widest text-gray-500 uppercase mt-1">{metric.label}</p>
                     </div>
                   ))}
                 </div>
