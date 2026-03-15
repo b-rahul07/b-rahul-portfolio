@@ -20,6 +20,20 @@ const projects = [
     image: "/kala-img.png",
   },
   {
+    title: "FraudGuard",
+    subtitle: "GRAPH-BASED FRAUD DETECTION",
+    description: "A graph-based credit card fraud detection platform that models transactions as a graph, generates structural embeddings using GraphSAGE, and detects anomalies with an autoencoder using reconstruction error. The system includes a real-time dashboard, batch CSV analysis, fraud analytics, and transaction simulation—bringing production-grade ML pipelines to financial security.",
+    metrics: [
+      { label: "MODEL", value: "GraphSAGE" },
+      { label: "METHOD", value: "Autoencoder" },
+      { label: "ANALYSIS", value: "Batch + Live" }
+    ],
+    tags: ["GraphSAGE", "Autoencoder", "React", "Graph ML", "Anomaly Detection", "Python"],
+    githubUrl: "https://github.com/b-rahul07/Fraud-Gaurd",
+    liveUrl: "https://fraud-gaurd-mu.vercel.app/",
+    image: "/fraudguard-img.png",
+  },
+  {
     title: "MediBridge Connect",
     subtitle: "REAL-TIME MEDICAL TRANSLATION",
     description: "A real-time telemedicine platform designed to break down language barriers in healthcare. MediBridge provides instant, two-way voice and text translation between doctors and patients using GPT-4o and Whisper AI. Behind the clean UI is a highly optimized, latency-sensitive chat engine powered by Socket.IO, featuring optimistic updates, infinite scroll for massive message histories, and secure hybrid authentication.",
@@ -33,20 +47,6 @@ const projects = [
     liveUrl: "https://medibridge-connect.vercel.app",
     image: "/medibrige.png",
   },
-  {
-    title: "A.C.E.",
-    subtitle: "SYSTEM DESIGN & ALGORITHMS",
-    description: "Academic management system featuring a custom greedy seating allocation algorithm and automated PDF-to-mind-map generation.",
-    metrics: [
-      { label: "MODULES", value: "3+" },
-      { label: "FEATURES", value: "Algorithmic" },
-      { label: "NLP", value: "Heuristic" }
-    ],
-    tags: ["React", "Express.js", "Supabase", "Algorithms", "PDF Processing"],
-    githubUrl: null,
-    liveUrl: null,
-    image: "/ace-image.png",
-  }
 ];
 
 export function ProjectsSection() {
