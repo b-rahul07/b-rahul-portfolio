@@ -4,14 +4,18 @@ import { Calendar, Building, ChevronRight } from "lucide-react";
 
 const experiences = [
   {
-    role: "Python Programming Intern",
-    company: "VaultofCodes",
-    period: "Jul 2025 – Aug 2025",
-    description: "Developed engineering utilities including CLI tools and data management scripts. Focused on modular program design, file-based persistence, and code maintainability.",
+    role: "Technology Development Intern",
+    company: "Inditech Technology Services",
+    link: "https://www.inditech.co.in/",
+    logo: "/inditech-logo.png",
+    period: "Feb 2026 – Aug 2026",
+    description: "Contributed to Django-based Red-Flag Alert System for clinical workflows and triage. Implemented data ingestion pipelines using gspread and pandas for syncing clinical rules. Maintained CRUD workflows with validation for reliable data handling. Resolved production issues including PDF bugs and email failures with fallback logic. Improved template stability by fixing rendering and syntax issues in Django templates.",
     achievements: [
-      "Built CLI tools with modular architecture",
-      "Implemented file-based data persistence",
-      "Practiced clean code principles and maintainability"
+      "Contributed to Django-based Red-Flag Alert System for clinical workflows and triage.",
+      "Implemented data ingestion pipelines using gspread and pandas for syncing clinical rules.",
+      "Maintained CRUD workflows with validation for reliable data handling.",
+      "Resolved production issues including PDF bugs and email failures with fallback logic.",
+      "Improved template stability by fixing rendering and syntax issues in Django templates."
     ]
   }
 ];
@@ -55,11 +59,23 @@ export function ExperienceSection() {
 
               <div className="backdrop-blur-md bg-gray-900/5 dark:bg-white/5 p-8 rounded-3xl border border-gray-900/10 dark:border-white/10 hover:border-teal-500/30 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 uppercase tracking-tighter font-display">{exp.role}</h3>
-                    <div className="flex items-center gap-2 text-teal-600 dark:text-teal-400 mt-1 transition-colors duration-300">
-                      <Building size={16} />
-                      <span className="font-bold uppercase tracking-tight">{exp.company}</span>
+                  <div className="flex items-center gap-4">
+                    {exp.logo && (
+                      <div className="w-12 h-12 rounded-xl bg-white p-2 border border-gray-900/5 flex items-center justify-center shrink-0">
+                        <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain" />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 uppercase tracking-tighter font-display">{exp.role}</h3>
+                      <a 
+                        href={exp.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center gap-2 text-teal-600 dark:text-teal-400 mt-1 transition-colors duration-300 hover:text-teal-500"
+                      >
+                        <Building size={16} />
+                        <span className="font-bold uppercase tracking-tight underline-offset-4 hover:underline">{exp.company}</span>
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 text-gray-500 dark:text-gray-500 text-sm font-mono tracking-tighter transition-colors duration-300 bg-gray-100 dark:bg-white/5 px-4 py-2 rounded-full border border-gray-900/5 dark:border-white/5">
@@ -75,7 +91,7 @@ export function ExperienceSection() {
                 <div className="grid gap-4">
                   {exp.achievements.map((item) => (
                     <div key={item} className="flex items-center gap-3 text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                      <ChevronRight className="w-4 h-4 text-teal-500" />
+                      <ChevronRight className="w-4 h-4 text-teal-500 shrink-0" />
                       <span>{item}</span>
                     </div>
                   ))}
