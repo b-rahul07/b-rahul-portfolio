@@ -9,7 +9,7 @@ const experiences = [
     link: "https://www.inditech.co.in/",
     logo: "/inditech-logo.png",
     period: "Feb 2026 – Aug 2026",
-    description: "Contributed to Django-based Red-Flag Alert System for clinical workflows and triage. Implemented data ingestion pipelines using gspread and pandas for syncing clinical rules. Maintained CRUD workflows with validation for reliable data handling. Resolved production issues including PDF bugs and email failures with fallback logic. Improved template stability by fixing rendering and syntax issues in Django templates.",
+    description: "Inditech is a healthcare technology company focused on improving clinical and commercial outcomes for pediatric brands in India. It delivers clinic-first, academy-endorsed digital programs that influence key healthcare KPIs such as patient origination, treatment decisions, and adherence. The company emphasizes measurable impact through short pilot cycles, data-driven dashboards, and scalable territory-level execution.",
     achievements: [
       "Contributed to Django-based Red-Flag Alert System for clinical workflows and triage.",
       "Implemented data ingestion pipelines using gspread and pandas for syncing clinical rules.",
@@ -67,10 +67,10 @@ export function ExperienceSection() {
                     )}
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 uppercase tracking-tighter font-display">{exp.role}</h3>
-                      <a 
-                        href={exp.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 text-teal-600 dark:text-teal-400 mt-1 transition-colors duration-300 hover:text-teal-500"
                       >
                         <Building size={16} />
@@ -83,7 +83,7 @@ export function ExperienceSection() {
                     {exp.period}
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg transition-colors duration-300">
                   {exp.description}
                 </p>
