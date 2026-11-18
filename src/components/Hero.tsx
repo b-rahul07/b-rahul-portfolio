@@ -78,7 +78,7 @@ export function Hero() {
       : { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, ease, delay } };
 
   const chips: { text: string; tone: "ink" | "white" | "blue"; href?: string }[] = [
-    { text: profile.name, tone: "ink" },
+    { text: "hi, I'm Rahul 👋", tone: "ink" },
     { text: "analyses data", tone: "ink" },
     { text: "& builds ML", tone: "ink" },
     { text: "from Hyderabad", tone: "white" },
@@ -86,12 +86,12 @@ export function Hero() {
 
   return (
     <section id="top" className="pt-[4.5rem]">
-      <div className="relative mx-2 overflow-hidden rounded-[1.75rem] bg-act-orange text-act-ink md:mx-4 md:rounded-[2.25rem]">
+      <div className="relative mx-2 overflow-hidden rounded-[1.75rem] bg-act-mist text-act-ink md:mx-4 md:rounded-[2.25rem]">
         {/* subtle dot grid */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
-          style={{ backgroundImage: "radial-gradient(#141414 1px, transparent 1px)", backgroundSize: "22px 22px" }}
+          style={{ backgroundImage: "radial-gradient(#1d3a3a 1px, transparent 1px)", backgroundSize: "22px 22px" }}
         />
 
         <div className="container relative flex min-h-[calc(100svh-5.5rem)] flex-col items-center justify-center py-16 text-center md:py-20">
@@ -120,13 +120,14 @@ export function Hero() {
 
           {/* name inside a design-tool selection frame */}
           <motion.div {...pop(0.15)} className="relative mt-12 md:mt-16">
-            <div className="relative border-[1.5px] border-act-cream/90 px-3 md:px-6">
+            <div className="relative border-[1.5px] border-act-ink/60 px-3 py-1 md:px-6">
               {["-left-1 -top-1", "-right-1 -top-1", "-bottom-1 -left-1", "-bottom-1 -right-1"].map((p) => (
-                <span key={p} aria-hidden className={`absolute h-2 w-2 border border-act-ink bg-act-cream ${p}`} />
+                <span key={p} aria-hidden className={`absolute h-2 w-2 border border-act-ink bg-white ${p}`} />
               ))}
-              <h1 className="display pb-[0.06em] text-[clamp(5.5rem,24vw,15.5rem)] text-act-cream">
-                <span className="sr-only">{profile.name}: </span>
-                Rahul<span className="text-act-ink">.</span>
+              <h1 className="display pb-[0.06em] text-[clamp(3.6rem,12.5vw,10rem)] text-act-ink">
+                Rahul{" "}
+                <br />
+                Bandikolla<span className="text-accent">.</span>
               </h1>
             </div>
             <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-act-blue px-1.5 py-0.5 font-mono text-[10px] text-white">
@@ -139,11 +140,11 @@ export function Hero() {
 
           <motion.p {...pop(0.35)} className="mt-14 max-w-2xl text-lg font-medium leading-snug md:text-xl">
             CS (AI & ML) student who builds data pipelines, digs into product funnels and trains ML models, then checks
-            whether the numbers <span className="rounded bg-act-cream px-1">actually hold up</span>.
+            whether the numbers <span className="rounded bg-white px-1">actually hold up</span>.
           </motion.p>
 
           <motion.div {...pop(0.45)} className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <a href="#work" className="btn-hard" style={{ ["--shadow" as string]: "#FFF4E4" }}>
+            <a href="#work" className="btn-hard" style={{ ["--shadow" as string]: "#ffffff" }}>
               See the work <ArrowDown className="h-4 w-4" />
             </a>
             <a
@@ -170,7 +171,7 @@ export function Hero() {
           </motion.div>
           <motion.div
             {...(reduce ? {} : { initial: { opacity: 0, rotate: 0, y: 40 }, animate: { opacity: 1, rotate: -4, y: 0 }, transition: { duration: 1, ease, delay: 0.7 } })}
-            className="absolute left-[2%] top-[58%] hidden -rotate-[4deg] xl:block"
+            className="absolute left-[2%] top-[70%] hidden -rotate-[4deg] xl:block"
           >
             <NotebookCell />
           </motion.div>

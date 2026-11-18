@@ -22,3 +22,10 @@ describe("App", () => {
     expect(document.querySelector(`a[href="mailto:${profile.email}"]`)).not.toBeNull();
   });
 });
+
+describe("Hero", () => {
+  it("shows the full name as the page heading", () => {
+    render(<App />);
+    expect(screen.getByRole("heading", { level: 1 }).textContent).toContain("Rahul Bandikolla");
+  });
+});

@@ -38,8 +38,8 @@ export function Logo() {
       className="group inline-flex -rotate-1 items-center gap-1.5 rounded-lg bg-act-ink px-3 py-1.5 text-white shadow-[3px_3px_0_0_#EA5434] transition-transform hover:rotate-0 dark:ring-1 dark:ring-white/15"
       aria-label={`${profile.name}, back to top`}
     >
-      <span className="text-[15px] font-extrabold uppercase leading-none tracking-[-0.04em]">Rahul's</span>
-      <span className="font-serif text-[17px] italic leading-none">folio</span>
+      <span className="font-serif text-[18px] italic leading-none">B.</span>
+      <span className="text-[15px] font-extrabold leading-none tracking-[-0.03em]">Rahul</span>
     </a>
   );
 }

@@ -29,6 +29,7 @@ export default {
         accent: "#EA5434",
         act: {
           orange: "#EA5434",
+          mist: "#BCD9D8",
           blue: "#3456E6",
           yellow: "#F4C430",
           green: "#22A35E",

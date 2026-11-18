@@ -2,7 +2,7 @@
 
 /** The page is told in acts; each has a section id and a panel colour. */
 export const acts = [
-  { id: "top", n: "01", name: "Hello", caption: "who's this", color: "orange" },
+  { id: "top", n: "01", name: "Hello", caption: "who's this", color: "mist" },
   { id: "work", n: "02", name: "The work", caption: "what I've built", color: "blue" },
   { id: "experience", n: "03", name: "The job", caption: "where I've worked", color: "yellow" },
   { id: "about", n: "04", name: "The person", caption: "how I think", color: "green" },
