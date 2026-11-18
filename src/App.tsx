@@ -1,41 +1,35 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Navbar } from "./components/Navbar";
-import StatsBar from './components/StatsBar';
-import { HeroSection } from "./components/HeroSection";
-import { AboutSection } from "./components/AboutSection";
-import { SkillsSection } from "./components/SkillsSection";
-import { ProjectsSection } from "./components/ProjectsSection";
-import { ExperienceSection } from "./components/ExperienceSection";
-import { EducationSection } from "./components/EducationSection";
-import { CertificationsSection } from "./components/CertificationsSection";
-import { ContactSection } from "./components/ContactSection";
+import { Nav } from "./components/Nav";
+import { Hero } from "./components/Hero";
+import { Intro } from "./components/Intro";
+import { ActsOverview } from "./components/ActsOverview";
+import { Work } from "./components/Work";
+import { Experience } from "./components/Experience";
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ActIndicator } from "./components/ActIndicator";
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <div className="min-h-screen bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
-        <Navbar />
-        <HeroSection />
-        <StatsBar />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ExperienceSection />
-        <EducationSection />
-        <CertificationsSection />
-        <ContactSection />
-        <Footer />
-      </div>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+export default function App() {
+  return (
+    <>
+      <a
+        href="#work"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-fg focus:px-4 focus:py-2 focus:text-bg"
+      >
+        Skip to the work
+      </a>
+      <Nav />
+      <main>
+        <Hero />
+        <Intro />
+        <ActsOverview />
+        <Work />
+        <Experience />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+      <ActIndicator />
+    </>
+  );
+}

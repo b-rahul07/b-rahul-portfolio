@@ -1,22 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul Bandikolla · Data & ML</title>
+    <meta
+      name="description"
+      content="Rahul Bandikolla: Computer Science (AI & ML) student in Hyderabad working on data pipelines, product analytics and machine learning."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/name_logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B Rahul | AI & ML Engineer</title>
-  <meta name="description"
-    content="Portfolio of B Rahul - AI/ML Engineer specializing in Deep Learning and Data Science." />
-  <meta property="og:title" content="B Rahul | AI & ML Engineer" />
-  <meta property="og:description"
-    content="Building deployable ML systems with emphasis on data curation and model performance." />
-  <meta property="og:image" content="/og-image.png" />
-</head>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://b-rahul-portfolio.vercel.app/" />
+    <meta property="og:title" content="Rahul Bandikolla · Data & ML" />
+    <meta
+      property="og:description"
+      content="Data pipelines, product analytics and machine learning, measured honestly."
+    />
+    <meta property="og:image" content="https://b-rahul-portfolio.vercel.app/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
 
+    <!-- Apply the saved or system theme before first paint to avoid a flash -->
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("theme"); } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.classList.add(t);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
