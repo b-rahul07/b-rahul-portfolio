@@ -4,21 +4,20 @@
 
 @layer base {
   :root {
-    /* warm paper + ink, one accent */
-    --bg: 243 241 236;
-    --fg: 22 21 19;
-    --muted: 104 100 93;
-    --card: 233 230 223;
-    --accent: 196 64 18;
+    --bg: 255 255 255;
+    --fg: 17 17 17;
+    --muted: 100 100 100;
+    --card: 255 255 255;
+    --soft: 246 245 241;
     color-scheme: light;
   }
 
   .dark {
-    --bg: 15 15 14;
-    --fg: 236 233 226;
-    --muted: 150 146 138;
-    --card: 28 27 25;
-    --accent: 255 112 64;
+    --bg: 12 12 12;
+    --fg: 242 242 240;
+    --muted: 160 160 156;
+    --card: 22 22 22;
+    --soft: 30 30 29;
     color-scheme: dark;
   }
 
@@ -29,12 +28,11 @@
 
   body {
     @apply bg-bg font-sans text-fg antialiased;
-    font-feature-settings: "ss01", "cv11";
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    @apply bg-accent text-bg;
+    @apply bg-accent text-white;
   }
 
   :focus-visible {
@@ -55,19 +53,39 @@
 }
 
 @layer components {
-  .eyebrow {
-    @apply font-mono text-[11px] uppercase tracking-[0.14em] text-muted;
+  /* big, heavy, tight display type */
+  .display {
+    @apply font-extrabold leading-[0.9] tracking-tightest;
+  }
+
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.12em];
+  }
+
+  /* black pill with a hard offset shadow; --shadow sets the colour */
+  .btn-hard {
+    @apply inline-flex items-center gap-2 rounded-full bg-fg px-5 py-2.5 text-sm font-semibold text-bg transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0;
+    box-shadow: 4px 4px 0 0 var(--shadow, #ea5434);
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line px-3.5 py-1.5 text-sm transition-colors hover:border-fg;
+  }
+
+  .outline-num {
+    color: transparent;
+    -webkit-text-stroke: 2px currentColor;
   }
 
   .link-underline {
     background-image: linear-gradient(currentColor, currentColor);
-    background-size: 0% 1px;
+    background-size: 100% 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.35s ease;
+    transition: background-size 0.3s ease;
   }
-  .link-underline:hover,
-  .link-underline:focus-visible {
-    background-size: 100% 1px;
+  .link-underline:hover {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
   }
 }
